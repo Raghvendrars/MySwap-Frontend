@@ -89,11 +89,11 @@ const TradingViewChart = ({ outputSymbol, inputSymbol, isDark, onTwChartSymbol }
           </Text>
         </Flex>
       )}
-      {(isLoading || debouncedLoading) && !hasNoData && (
+      {/* {(isLoading || debouncedLoading) && !hasNoData && (
         <LoadingWrapper $isDark={isDark}>
           <BarChartLoader />
         </LoadingWrapper>
-      )}
+      )} */}
       {!hasNoData && (
         <TradingViewWrapper $show={!isLoading}>
           {symbol && <TradingView id={ID} symbol={`${SYMBOL_PREFIX}${symbol}`} />}

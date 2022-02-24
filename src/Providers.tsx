@@ -9,9 +9,14 @@ import { LanguageProvider } from 'contexts/Localization'
 import { ToastsProvider } from 'contexts/ToastsContext'
 import { fetchStatusMiddleware } from 'hooks/useSWRContract'
 import { Store } from '@reduxjs/toolkit'
+import { darkColors, lightColors } from './Colors'
 
-const ThemeProviderWrapper = (props) => {
+const ThemeProviderWrapper = props => {
   const [isDark] = useThemeManager()
+
+  light.colors = lightColors
+
+  dark.colors = darkColors
   return <ThemeProvider theme={isDark ? dark : light} {...props} />
 }
 
